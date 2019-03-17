@@ -35,6 +35,10 @@ prepare() {
   sed -i "s:\[/opt/puppetlabs/puppet/lib/ruby/vendor_ruby\]:\[$( ruby -e \
     'puts RbConfig::CONFIG["vendorlibdir"]' ),$( ruby -e \
     'puts RbConfig::CONFIG["vendordir"]' )\]:" "ext/config/conf.d/${pkgname}.conf"
+  sed -i "s:/opt/puppetlabs/puppet/lib/ruby/vendor_gems:$( ruby -e \
+    'puts Gem.default_dir' ):" \
+    ext/build-scripts/install-vendored-gems.sh
+  sed -i 's:#!/opt/.*/ruby:#!/usr/bin/ruby:' ext/cli/ca
 }
 
 package() {
