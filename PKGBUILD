@@ -3,7 +3,7 @@
 # Contributor: Niels Abspoel <aboe76 (at) Gmail (dot) com>
 
 pkgname=puppetserver
-pkgver=5.3.1
+pkgver=6.2.1
 pkgrel=1
 pkgdesc="Server automation framework and application"
 arch=('any')
@@ -24,7 +24,7 @@ backup=('etc/default/puppetserver'
 install="${pkgname}.install"
 source=("${pkgname}-${pkgver}.tar.gz::https://downloads.puppetlabs.com/puppet/${pkgname}-${pkgver}.tar.gz"
         "${pkgname}-${pkgver}.tar.gz.asc::https://downloads.puppetlabs.com/puppet/${pkgname}-${pkgver}.tar.gz.asc")
-sha512sums=('3d618c351299f4cc038682ab43eb4686bd1baf8f88390c8ac41eb3be9fdf8a7a3a501f0ab8713e45bee0ed02d7a9fd1ed1b7252ebb640ee52aa5da638f0b2ce2'
+sha512sums=('ad8cd8441ac76c0443f0fca14999a014c5511d930b96e9721ff9c236ffb48cb3273e0abb2e615fa3210c539173d472c4080466bc391a863c2c4fadb32d26868c'
             'SKIP')
 validpgpkeys=('6F6B15509CF8E59E6E469F327F438280EF8D349F')
 
